@@ -1,4 +1,4 @@
-## simple HTTP Server with inotify
+## Simple HTTP Server with inotify
 
 This is a simple HTTP server written in C++ that servers static files and uses inotify to detect changes to a specific file and trigger a reload of the page in the browser.
 
@@ -24,20 +24,20 @@ This is a simple HTTP server written in C++ that servers static files and uses i
 
 By default, the server listens on port `8080` and serves file from the current directory. You can change these settings by modifying the following lines in `http_server.cpp`:
 
-'''
+```
 #define PORT 8080
 ...
 std::string index_file_path = "index.html";
-'''
+```
 
 To add support for additional MIME types, modify the `MIME_TYPES` map in the `http_server.cpp`.
 
-'''
+```
 std::map<std::string, std::string> MIME_TYPES ={
     {"html", "text/html"},
     {"css", "text/css"},
     {"js", "text/javascript"}};
-'''
+```
 
 ## Project status
 
